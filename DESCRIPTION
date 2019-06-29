@@ -2,7 +2,7 @@ Package: pathr
 Type: Package
 Title: Path finding algorithms in R
 Description: Update later!
-Version: 0.1.1
+Version: 0.1.3
 Date: 2016-06-28
 Authors@R: person(
     give = "Brandon",

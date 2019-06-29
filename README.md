@@ -1,6 +1,6 @@
 # pathr
 
-[![Build Status](https://travis-ci.org/btmonier/pathr.png?branch=master)](https://travis-ci.org/btmonier/pathr)  [![codecov](https://codecov.io/gh/btmonier/pathr/branch/master/graph/badge.svg)](https://ci.appveyor.com/project/btmonier/pathr)
+[![Build Status](https://travis-ci.org/btmonier/pathr.png?branch=master)](https://travis-ci.org/btmonier/pathr)  [![Build status](https://ci.appveyor.com/api/projects/status/xxgcbg2bfi4p8tfl?svg=true)](https://ci.appveyor.com/project/btmonier/pathr)  [![codecov](https://codecov.io/gh/btmonier/pathr/branch/master/graph/badge.svg)](https://ci.appveyor.com/project/btmonier/pathr)
 
 
 ## Installing
