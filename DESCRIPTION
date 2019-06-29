@@ -2,14 +2,16 @@ Package: pathr
 Type: Package
 Title: Path finding algorithms in R
 Description: Update later!
-Version: 0.1.0
+Version: 0.1.1
 Date: 2016-06-28
-Authors@R: c(person("", "name", role=c("aut", "cre"), email="youremail@example.com"))
-Author: yourname [aut, cre]
-Maintainer: yourname <youremail@example.com>
-URL: https://github.com/yourgithub/yourpackagename
-BugReports: https://github.com/yourgithub/yourpackagename/issues
-License: MIT + file LICENSE
+Authors@R: person(
+    give = "Brandon",
+    famil = "Monier",
+    email = "brandon.monier@gmail.com",
+    role = c("aut", "cre"))
+URL: https://github.com/btmonier/pathr
+BugReports: https://github.com/btmonier/pathr/issues
+License: GPL-3 | file LICENSE
 Depends:
     R (>= 3.0.0)
 Imports:

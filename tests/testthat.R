@@ -1,2 +1,2 @@
 library(testthat)
-test_check("yourpackagename")
+test_check("pathr")
