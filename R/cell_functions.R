@@ -14,12 +14,27 @@
 #'   is set to \code{FALSE}, no wall will be drawn.
 #'
 #' @importFrom graphics segments
-cell <- function(x, y, cell_width, walls = c(TRUE, TRUE, TRUE, TRUE)) {
+cell <- function(x,
+                 y,
+                 cell_width = 1,
+                 walls = c(TRUE, TRUE, TRUE, TRUE),
+                 cell_color = "lightblue",
+                 visited = FALSE) {
 
-    # Wall order [bottom, left, top, right]
-    walls <- c(TRUE, TRUE, TRUE, TRUE)
+    ## Vist check
+    if (visited) {
+        cell_color <- "pink"
+    }
 
-    # Bottom walls
+    ## Polygon with color
+    graphics::polygon(
+        x = c(x, x, x + cell_width, x + cell_width),
+        y = c(y, y + cell_width, y + cell_width, y),
+        border = NA,
+        col = cell_color
+    )
+
+    ## Bottom walls
     if (walls[1]) {
         graphics::segments(
             x0 = x,
@@ -29,7 +44,7 @@ cell <- function(x, y, cell_width, walls = c(TRUE, TRUE, TRUE, TRUE)) {
         )
     }
 
-    # Left walls
+    ## Left walls
     if (walls[2]) {
         graphics::segments(
             x0 = x,
@@ -39,7 +54,7 @@ cell <- function(x, y, cell_width, walls = c(TRUE, TRUE, TRUE, TRUE)) {
         )
     }
 
-    # Top walls
+    ## Top walls
     if (walls[3]) {
         graphics::segments(
             x0 = x,
@@ -49,7 +64,7 @@ cell <- function(x, y, cell_width, walls = c(TRUE, TRUE, TRUE, TRUE)) {
         )
     }
 
-    # Right walls
+    ## Right walls
     if (walls[4]) {
         graphics::segments(
             x0 = x + cell_width,
@@ -75,7 +90,9 @@ cell <- function(x, y, cell_width, walls = c(TRUE, TRUE, TRUE, TRUE)) {
 #' @importFrom graphics par
 #' @importFrom graphics plot.new
 #' @importFrom graphics plot.window
-canvas <- function(x_max, y_max, col_width = 1, border_pad = 1) {
+canvas <- function(x_max = 10, y_max = 10, col_width = 1, border_pad = 1) {
+
+    ## Set initial canvas coordinate
     canvas_start <- 1
 
     ## Set margins
